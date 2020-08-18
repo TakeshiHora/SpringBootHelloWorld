@@ -7,6 +7,6 @@ public class HelloWorldControllerTest {
     public void getTimeOfHelloWorld(){
         HelloWorldController helloWorldController = new HelloWorldController();
         
-        System.out.println(helloWorldController.getHelloWorldAndTime().getHelloWorld());
+        System.out.println(helloWorldController.getHelloWorldAndTime());
     }
 }
