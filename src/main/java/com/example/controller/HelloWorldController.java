@@ -2,17 +2,18 @@ package com.example.controller;
 
 import com.example.service.HelloWorldService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping
 public class HelloWorldController {
     
     @GetMapping("/hello")
-    public String getHelloWorldAndTime(){
+    public String getHelloWorldAndTime(Model model){
         HelloWorldService helloWorldService = new HelloWorldService();
         
-        return helloWorldService.getHelloWorldAndTime();
+        model.addAttribute("msg", helloWorldService.getHelloWorldAndTime());
+        
+        return "hello";
     }
 }
