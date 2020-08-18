@@ -1,6 +1,5 @@
 package com.example.service;
 
-import com.example.model.HelloWorld;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -9,12 +8,9 @@ import java.time.LocalDateTime;
 @Service
 public class HelloWorldService {
     
-    public String getHelloWorldAndTime() {
-        HelloWorld helloWorld = new HelloWorld();
+    public String getHelloWorldAndTime(){
         LocalDateTime helloWorldTime = LocalDateTime.now();
         
-        helloWorld.setHelloWorld("HelloWorld" + " " + helloWorldTime);
-        
-        return helloWorld.getHelloWorld();
+        return "HelloWorld" + " " + helloWorldTime;
     }
 }
